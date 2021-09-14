@@ -1,0 +1,27 @@
+# Generating an ssh key
+ssh-keygen -t rsa -C "andrewbheyer@gmail.com"
+name it it `/path/to/.ssh/[name]_rsa`
+
+# Managing multiple keys
+Create the file `~/.ssh/config`
+Then add the following config for each ssh key, here's an example
+
+Host taco-sauce
+    HostName 34.210.113.19
+    Port 22
+    User root
+    IdentityFile /path/to/.ssh/taco-sauce
+
+Host papa-queso
+    HostName 35.210.10.120
+    Port 22
+    User root
+    IdentityFile /path/to/.ssh/papa-queso
+
+Host github.com
+    User git
+    Hostname github.com
+    PreferredAuthentications publickey
+    IdentityFile /path/to/.ssh/andrebwbheyerGithub_rsa
+
+
