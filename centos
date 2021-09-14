@@ -1,0 +1,2 @@
+# Centos basic packages
+sudo yum install git
