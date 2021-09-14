@@ -1,0 +1,21 @@
+Getting started with docker changes a little bit depending on the 
+
+# Centos 7 https://docs.docker.com/engine/install/centos/
+
+# first delete all the old Docker installations since they are outdated version
+yum remove docker docker-common docker-selinux docker-engine
+
+$ install the device driver for Centos7 which works well with Docker currently
+yum install -y yum-utils device-mapper-persistent-data lvm2
+
+# Install the updated docker CE version, should be version 20 or higher
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+yum install docker-ce
+yum install docker-compose
+
+
+
+# Building all container from new
+docker-compose up --build
+
+
