@@ -24,4 +24,9 @@ Host github.com
     PreferredAuthentications publickey
     IdentityFile /path/to/.ssh/andrebwbheyerGithub_rsa
 
+# How to forward SSH agents?
+If you want to user your local keys from a remote server enable agent forwarding.
+Add `ForwardAgent` to you config.
 
+Host example
+  ForwardAgent yes
